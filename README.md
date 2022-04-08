@@ -1,2 +1,2 @@
 # lovin-ruby-tutorial
-Ann wears ruby on her mind
+Ann wears Ruby on her mind
