@@ -14,8 +14,17 @@ p input
 #Store a random number for the player to guess
 puts "Hey I've got a random number"
 puts "can you guess this?"
-targetnumber = rand(100) + 1
+target_number = rand(100) + 1
 
-#keep track of player guesses
+#Keep track of player guesses
+num_guesses = 0
+puts "You've got #{10 - num_guesses} guesses left."
+
+#allows player to guess a number
+number_input = gets.to_i
+puts "pick a number! #{number_input}"
+num_guesses += 1
 
 
+
+puts number_input < target_number 
