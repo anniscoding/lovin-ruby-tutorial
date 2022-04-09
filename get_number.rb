@@ -38,3 +38,7 @@ elsif guess_input == target_number
     guessed_it = true
 end
 
+#reveals number when player runs out of guesses
+unless guessed_it
+    puts "sorry matey! you've exhausted all the guesses. (it was #{target_number}."
+end 
