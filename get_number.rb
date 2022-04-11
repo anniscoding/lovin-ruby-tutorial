@@ -17,25 +17,28 @@ target_number = rand(100) + 1
 
 #Keep track of player guesses
 num_guesses = 0
-puts "You've got #{10 - num_guesses} guesses left."
 
 #track if player had guessed correctly
-gussed_it = false
+guessed_it = false
 
-#allows player to guess a number
-guess_input = gets.to_i
-puts "pick a number! #{guess_input}"
-num_guesses += 1
+#track number of guesses and allows player to guess a number
+until num_guesses == 10 || guessed_it
+    puts "you've got #{10 - num_guesses} guesses remain."
+    print "Make a guess: "
+    guess_input = gets.to_i
+    num_guesses += 1
 
 
 #compares the guess to target number
-if guess_input < target_number 
+    if guess_input < target_number 
     puts "try again but higher"
-elsif guess_input > target_number
+    elsif guess_input > target_number
     puts "try again but lower"
-elsif guess_input == target_number
-    puts "perfection! you guessed mee number in #{num_guesses}, horrah!  "
+    elsif guess_input == target_number
+    puts "perfection! you guessed mee number in #{num_guesses} turns, horrah!  "
     guessed_it = true
+    end
+
 end
 
 #reveals number when player runs out of guesses
