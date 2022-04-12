@@ -17,3 +17,15 @@ sound_horn
 accelerate
 use_headlights
 use_headlights("high-beam")
+
+#returns milage and gas used
+def mileage(miles_driven, gas_used)
+    if gas_used == 0
+        return 0.0
+    end
+    miles_driven / gas_used
+end 
+
+#
+
+
