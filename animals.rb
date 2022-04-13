@@ -81,3 +81,40 @@ doggy.make_up_name
 doggy.move("yard")
 doggy.make_up_age
 doggy.report_age
+
+
+
+#Use accessor method
+class DogDogAccessor
+    # write a new value to the @name 
+    def name= (new_value)
+        @name = new_value
+    end
+    # read the value from @name 
+    def name
+        @name
+    end
+    # write a new value to @age 
+    def age= (new_value)
+        @age = new_value
+    end
+    # Read the value from @age  
+    def age
+        @age
+    end
+
+    def report_age
+        puts "#{@name} is #{@age} years old."
+    end
+
+end
+
+fidooo=DogDogAccessor.new
+fidooo.name = "Fido"
+fidooo.age = 2
+rex = DogDogAccessor.new
+rex.name = "Rex"
+rex.age = 3
+fidooo.report_age
+fidooo.report_age
+rex.report_age
