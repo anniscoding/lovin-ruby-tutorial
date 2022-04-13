@@ -118,3 +118,29 @@ rex.age = 3
 fidooo.report_age
 fidooo.report_age
 rex.report_age
+
+
+class DogWRAccessor 
+    attr_accessor :name, :age
+
+    def report_age
+        puts "#{@name} is #{age} years old."
+    end
+
+    def talk
+        puts "#{@name} says Bark!"
+    end
+
+    def move(destination)
+        puts "#{@name} runs to the #{destination}."
+    end
+
+end
+
+dogwr = DogWRAccessor.new
+dogwr.name = "smelly"
+puts dogwr.name
+puts dogwr.age = 3
+dogwr.name = "smellpooy"
+puts dogwr.name
+dogwr.move("garden")
