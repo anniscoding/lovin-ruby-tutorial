@@ -53,6 +53,7 @@ blender.blend("high")
 #continue with more animal class exercises
 class DogDog
     def make_up_name
+        #this is an instance variable
         @name = "Sandy"
     end
     def talk
